@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+:root {
+    --customblue: #4285f4; /* Example color, replace with your custom blue */
+  }
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+}
+
+.container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+.skill-logo{
+    max-width: 40px;
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1350px;
+    }
+}
+
+.section_title p {
+    font-weight: 500;
+    font-size: 55px;
+    position: relative;
+    border-bottom: 4px solid #4285f4;
+    width: -30px;
+    line-height: 1.5;
+    color: white;
+}
+
+.section_title h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: black;
+}
+
+.section_title.center {
+    text-align: center;
+}
+
+.experience-section {
+    padding: 65px 0 100px;
+    background-color: white;
+    position: relative;
+    background-color: black;
+}
+
+.experience-items {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to new line when there isn't enough space */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.experience-item {
+    flex: 0 0 calc(48% - 10px); 
+    max-width: calc(48% - 10px); 
+    
+
+}
+
+.experience-info {
+    display: flex;
+    flex-direction: column; /* Displaying the text elements vertically */
+}
+
+.experience-info p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    opacity: 1;
+    -webkit-animation: showText 0.5s 1s linear forwards;
+    animation: showText 0.5s 1s linear forwards;
+}
+.progress-line{
+    margin-top: 7px;
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+    opacity: 1;
+    box-shadow:0 0px 6px rgba(255, 255, 255, 0.992), 0 0 6px rgba(255, 255, 255, 0.989) ;
+    
+}
+.progress-line span{
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: animate 1s cubic-beizer(1,0,0.5,1) forwards;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    background-color:var(--customblue) ;
+    transition: 1s all;
+    
+}
+.progress-line span.animate{
+    -webkit-animation: animate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+    animation: animate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+    
+}
+
+
+@-webkit-keyframes showText {
+    
+    100% {
+        opacity: 1;
+        
+    }
+}
+@keyframes showText {
+    
+    100% {
+        opacity: 1;
+        
+    }
+}
+@-webkit-keyframes animate {
+    
+    100% {
+       -webkit-transform: scaleX(1);
+       transform: scaleX(1);
+
+        
+    }
+}
+@keyframes animate {
+    
+    100% {
+       -webkit-transform: scaleX(1);
+       transform: scaleX(1);
+
+        
+    }
+}
